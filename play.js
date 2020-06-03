@@ -1,7 +1,9 @@
 // play.js
-const { connect } = require("./client");
+const { connect, setupInput } = require("./client");
 console.log("Connecting ...");
 connect();
+
+setupInput();
 
 // console.log("Successfully connected to game server");
 // console.log("Name: JS");
