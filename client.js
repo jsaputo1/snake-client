@@ -13,10 +13,16 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log("Server says: ", data);
   });
+
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-
     conn.write("Name: JS");
+    // for (let i = 0; i < 10; i++) {
+    //   console.log(i);
+    //   setTimeout(() => {
+    //     conn.write("Move: left");
+    //   }, i * 1000);
+    // }
   });
 
   return conn;
